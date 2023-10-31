@@ -1,2 +1,24 @@
-# airbnb-clone-rails
-Welcome to the Rails Airbnb Clone project, a web application that replicates the core functionality of Airbnb, the popular online marketplace for lodging and travel experiences. This project is built using the Ruby on Rails framework, designed to provide users with a seamless experience for searching, listing, and booking accommodations.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
