@@ -8,6 +8,11 @@
   width: 200%;
 }
 
-#nav-user-dropdown .dropdown-item {
+#nav-user-dropdown .dropdown-item:active {
+  background: #f8f9fa !important;
   padding: 0.6em 1em;
+}
+
+.sign-in-btn:hover {
+  background: #f8f9fa !important;
 }

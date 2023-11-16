@@ -26,3 +26,26 @@
 .logo-color {
   color: #ff385c;
 }
+
+#loginModal input:focus {
+  box-shadow: none !important;
+  border-color: black !important;
+  outline: 2px solid black !important;
+}
+
+#loginModal .modal-body {
+  height: 80vh !important;
+  overflow-y: scroll !important;
+}
+
+#loginModal .modal-header .btn-close {
+  height: 0.2em !important;
+  opacity: 1;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 768px){
+  .modal-dialog {
+    max-width: 568px !important;
+  }
+};
