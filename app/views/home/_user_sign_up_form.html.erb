@@ -1,0 +1,96 @@
+<div class="modal-content" id="signupModal">
+  <div class="modal-header py-3">
+    <button type="button" class="position-absolute bg-transparent border-0">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48"><path fill="none" stroke="#696969" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M31 36L19 24l12-12"></path></svg>
+    </button>
+    <h5 class="modal-title text-center fw-bolder" style="width: 100%;" id="modalLabel">Finish signing up</h5>
+  </div>
+  <div class="modal-body p-4 pt-4">
+    <%= form_tag('#', id: 'sign-up-user-form', data: { controller: 'sign-up-user' }, class: "border-bottom pb-4 position-relative") do %>
+      <div class="mb-3 mt-4">
+        <%=
+          text_field_tag 'first_name',
+          nil,
+          placeholder: 'First name',
+          required: true,
+          data: { sign_up_user_target: 'first_name' },
+          class: "form-control p-3 bg-transparent",
+          id: "first-name",
+          style: "border-bottom-left-radius: 0; border-bottom-right-radius: 0;",
+          aria: { describedby: 'name-help' }
+        %>
+        <%=
+          text_field_tag 'last_name',
+          nil,
+          placeholder: 'Last name',
+          required: true,
+          data: { sign_up_user_target: 'last_name' },
+          class: "form-control p-3 bg-transparent",
+          id: "last-name",
+          style: "border-top-left-radius: 0; border-top-right-radius: 0; border-top: 0;",
+          aria: { describedby: 'name-help' }
+        %>
+        <div id="name-help" class="form-text">Make sure it matches the name on your government ID.</div>
+      </div>
+
+      <div class="mb-3 mt-4">
+        <%=
+          date_field_tag 'birthdate',
+          nil,
+          placeholder: 'Birthdate',
+          required: true,
+          data: { sign_up_user_target: 'first_name' },
+          class: "form-control p-3 bg-transparent",
+          id: "birth-date",
+          aria: { describedby: 'date-help' }
+        %>
+        <div id="date-help" class="form-text">To sign up, you need to be at least 18. Your birthday won’t be shared with other people who use Airbnb.</div>
+      </div>
+
+      <div class="mb-3 mt-4">
+        <%=
+          text_field_tag 'email',
+          nil,
+          placeholder: 'Email',
+          required: true,
+          data: { check_user_target: 'email' },
+          class: "form-control p-3 bg-transparent",
+          id: "email",
+          aria: { describedby: 'email-help' }
+        %>
+        <div id="email-help" class="form-text">We'll email you trip confirmations and receipts.</div>
+      </div>
+
+      <div class="form-text mb-4 text-dark">
+        By selecting <strong>Agree and continue</strong>, I agree to Airbnb’s
+        <a href="#" class="text-decoration-underline">Terms of Service, Payments Terms of Service,</a>
+        and <a href="#" class="text-decoration-underline">Nondiscrimination Policy</a>
+        and acknowledge the <a href="#" class="text-decoration-underline">Privacy Policy.</a>
+      </div>
+      <%=
+        submit_tag 'Agree and Continue',
+        data: { action: 'sign-up-user#submitForm' },
+        class: "btn btn-danger mb-2 fw-semibold auth-submit",
+        id: "signup-form-submit"
+      %>
+    <% end %>
+
+    <div class="mt-4">
+      <div class="form-text mb-4 text-dark">
+        Airbnb will send you members-only deals, inspiration, marketing emails, and push notifications.
+        You can opt out of receiving these at any time in your account settings or directly from the
+        marketing notification.
+      </div>
+      <div class="mb-3 form-check p-0">
+        <%=
+          check_box_tag "agreee",
+          class: "form-check-input",
+          id: "marketing-check-box"
+        %>
+        <label class="form-text mx-3 text-dark" for="marketing-check-box">
+          I don’t want to receive marketing messages from Airbnb.
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

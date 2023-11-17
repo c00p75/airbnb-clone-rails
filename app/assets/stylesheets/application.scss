@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "nav";
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-color {
+  color: #ff385c;
+}
+
+#modalWindow input:focus {
+  box-shadow: none !important;
+  border-color: black !important;
+  outline: 2px solid black !important;
+  border-radius: 5px !important;
+}
+
+#modalWindow .form-text {
+  font-size: 0.8em !important;
+}
+
+#marketing-check-box {
+  transform: scale(1.5);
+}
+
+#loginModal .modal-body {
+  height: 80vh !important;
+  overflow-y: scroll !important;
+}
+
+#loginModal .modal-header .btn-close {
+  height: 0.2em !important;
+  opacity: 1;
+  box-sizing: border-box !important;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 0.75em 0;
+  background-image: radial-gradient( circle at center, #d70466 60%, #e61e4d 100% );
+}
+
+@media (min-width: 768px){
+  .modal-dialog {
+    max-width: 568px !important;
+  }
+};
