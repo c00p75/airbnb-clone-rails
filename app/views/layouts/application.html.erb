@@ -47,13 +47,13 @@
               <ul class="dropdown-menu border-0 shadow rounded-3 mt-2" id="nav-user-dropdown">
                 <li>
                   <!-- Button trigger modal -->
-                  <button type="button" class="dropdown-item bg-transparent sign-in-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  <button type="button" class="dropdown-item bg-transparent sign-in-btn" data-bs-toggle="modal" data-bs-target="#modalWindow">
                     Sign up
                   </button>
                 </li>
                 <li>
                   <!-- Button trigger modal -->
-                  <button type="button" class="dropdown-item bg-transparent sign-in-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  <button type="button" class="dropdown-item bg-transparent sign-in-btn" data-bs-toggle="modal" data-bs-target="#modalWindow">
                     Sign in
                   </button>
                 </li>
@@ -67,7 +67,7 @@
         </div>
       </div>
     </nav>
-    <%= render "shared/modal" %>
+    <%= render "shared/modal", modal_content:"home/user_sign_up_form" %>
     <%= yield %>
   </body>
 </html>

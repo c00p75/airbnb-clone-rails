@@ -27,10 +27,19 @@
   color: #ff385c;
 }
 
-#loginModal input:focus {
+#modalWindow input:focus {
   box-shadow: none !important;
   border-color: black !important;
   outline: 2px solid black !important;
+  border-radius: 5px !important;
+}
+
+#modalWindow .form-text {
+  font-size: 0.8em !important;
+}
+
+#marketing-check-box {
+  transform: scale(1.5);
 }
 
 #loginModal .modal-body {
@@ -42,6 +51,12 @@
   height: 0.2em !important;
   opacity: 1;
   box-sizing: border-box !important;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 0.75em 0;
+  background-image: radial-gradient( circle at center, #d70466 60%, #e61e4d 100% );
 }
 
 @media (min-width: 768px){
